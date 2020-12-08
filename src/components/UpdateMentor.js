@@ -21,7 +21,7 @@ export default class UpdateMentor extends Component {
       }
     
       componentDidMount() {
-        axios.get('http://localhost:8000/students/edit-student/' + this.props.match.params.id)
+        axios.get('http://localhost:8000/mentors/edit-mentor/' + this.props.match.params.id)
           .then(res => {
             this.setState({
               name: res.data.name,
@@ -55,15 +55,15 @@ export default class UpdateMentor extends Component {
           mid: this.state.mid
         };
     
-        axios.put('http://localhost:4000/students/update-mentor/' + this.props.match.params.id, studentObject)
+        axios.put('http://localhost:8000/mentors/update-mentor/' + this.props.match.params.id, studentObject)
           .then((res) => {
             console.log(res.data)
-            console.log('Student successfully updated')
+            console.log('Mentor successfully updated')
           }).catch((error) => {
             console.log(error)
           })
     
-        // Redirect to Student List 
+        // Redirect to Mentor List 
         this.props.history.push('/mentor-list')
       }
     
