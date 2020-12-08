@@ -9,7 +9,7 @@ export default class MentorTable extends Component {
         this.deleteMentor = this.deleteMentor.bind(this);
     }
 
-    deleteStudent() {
+    deleteMentor() {
         axios.delete('http://localhost:8000/students/delete-mentor/' + this.props.obj._id)
             .then((res) => {
                 console.log('Student successfully deleted!')
@@ -25,10 +25,11 @@ export default class MentorTable extends Component {
                 <td>{this.props.obj.email}</td>
                 <td>{this.props.obj.mid}</td>
                 <td>
+                    
                     <Link className="edit-link" to={"/edit-mentor/" + this.props.obj._id}>
                         Edit
                     </Link>
-                    <Button onClick={this.deleteStudent} size="sm" variant="danger">Delete</Button>
+                    <Button onClick={this.deleteMentor} size="sm" variant="danger">Delete</Button>
                 </td>
             </tr> 
             </div>
