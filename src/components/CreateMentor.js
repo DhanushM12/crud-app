@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import axios from 'axios';
 
 export default class CreateMentor extends Component {
     constructor(props) {
@@ -38,6 +39,14 @@ export default class CreateMentor extends Component {
         console.log(`Name: ${this.state.name}`);
         console.log(`Email: ${this.state.email}`);
         console.log(`Roll no: ${this.state.mid}`);
+        const mentorObject = {
+            name: this.state.name,
+            email: this.state.email,
+            mid: this.state.mid
+          };
+          axios.post('http://localhost:8000/mentors/create-mentor', mentorObject)
+            .then(res => console.log(res.data));
+      
     
         this.setState({name: '', email: '', mid: ''})
       }
