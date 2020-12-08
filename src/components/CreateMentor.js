@@ -35,7 +35,7 @@ export default class CreateMentor extends Component {
       onSubmit(e) {
         e.preventDefault()
     
-        console.log(`Student successfully created!`);
+        console.log(`Mentor successfully created!`);
         console.log(`Name: ${this.state.name}`);
         console.log(`Email: ${this.state.email}`);
         console.log(`Roll no: ${this.state.mid}`);

@@ -12,7 +12,7 @@ export default class MentorTable extends Component {
     deleteMentor() {
         axios.delete('http://localhost:8000/mentors/delete-mentor/' + this.props.obj._id)
             .then((res) => {
-                console.log('Student successfully deleted!')
+                console.log('Mentor successfully deleted!')
             }).catch((error) => {
                 console.log(error)
             })

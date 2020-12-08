@@ -49,13 +49,13 @@ export default class UpdateMentor extends Component {
       onSubmit(e) {
         e.preventDefault()
     
-        const studentObject = {
+        const mentorObject = {
           name: this.state.name,
           email: this.state.email,
           mid: this.state.mid
         };
     
-        axios.put('http://localhost:8000/mentors/update-mentor/' + this.props.match.params.id, studentObject)
+        axios.put('http://localhost:8000/mentors/update-mentor/' + this.props.match.params.id, mentorObject)
           .then((res) => {
             console.log(res.data)
             console.log('Mentor successfully updated')
@@ -87,7 +87,7 @@ export default class UpdateMentor extends Component {
               </Form.Group>
       
               <Button variant="danger" size="lg" block="block" type="submit">
-                Update Student
+                Update Mentor
               </Button>
             </Form>
           </div>

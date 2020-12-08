@@ -36,7 +36,7 @@ function App() {
 
               <Nav>
                 <Link to={"/edit-mentor/:id"} className="nav-link">
-                  Update Student
+                  Update Mentor
                 </Link>
               </Nav>
 

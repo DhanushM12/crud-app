@@ -12,7 +12,7 @@ let mentorSchema = new Schema({
     type: Number
   }
 }, {
-    collection: 'students'
+    collection: 'mentors'
   })
 
 module.exports = mongoose.model('Mentor', mentorSchema);

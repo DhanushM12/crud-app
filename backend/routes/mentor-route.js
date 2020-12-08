@@ -2,7 +2,7 @@ let mongoose = require('mongoose'),
   express = require('express'),
   router = express.Router();
 
-// Student Model
+// Mentor Model
 let mentorSchema = require('../models/Mentor');
 
 // CREATE Mentor
@@ -42,7 +42,7 @@ router.route('/edit-mentor/:id').get((req, res) => {
 
 // Update Mentor
 router.route('/update-mentor/:id').put((req, res, next) => {
-  studentSchema.findByIdAndUpdate(req.params.id, {
+  mentorSchema.findByIdAndUpdate(req.params.id, {
     $set: req.body
   }, (error, data) => {
     if (error) {
@@ -57,7 +57,7 @@ router.route('/update-mentor/:id').put((req, res, next) => {
 
 // Delete Mentor
 router.route('/delete-mentor/:id').delete((req, res, next) => {
-  studentSchema.findByIdAndRemove(req.params.id, (error, data) => {
+  mentorSchema.findByIdAndRemove(req.params.id, (error, data) => {
     if (error) {
       return next(error);
     } else {
