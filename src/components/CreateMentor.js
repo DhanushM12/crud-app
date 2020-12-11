@@ -67,7 +67,7 @@ export default class CreateMentor extends Component {
 
                 <Form.Group controlId="Name">
                 <Form.Label>Mentor ID</Form.Label>
-                <Form.Control type="text" value={this.state.rollno} onChange={this.onChangeMentorId}/>
+                <Form.Control type="text" value={this.state.mid} onChange={this.onChangeMentorId}/>
                 </Form.Group>
 
                 <Button variant="danger" size="lg" block="block" type="submit">

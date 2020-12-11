@@ -26,7 +26,7 @@ export default class MentorTable extends Component {
                 <td>{this.props.obj.mid}</td>
                 <td>
                     <Link className="edit-link" to={"/edit-mentor/" + this.props.obj._id}>
-                        Edit
+                        Update
                     </Link>
                     <Button onClick={this.deleteMentor} size="sm" variant="danger">Delete</Button>
                 </td>
